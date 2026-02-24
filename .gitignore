@@ -1,0 +1,11 @@
+# Sensitive extension signing key
+*.pem
+
+# Packaged extension artifacts
+*.crx
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

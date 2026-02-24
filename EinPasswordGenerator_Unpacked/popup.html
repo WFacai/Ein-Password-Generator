@@ -1,0 +1,101 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>密码生成器</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="title">密码生成器</div>
+        <div class="header-actions">
+          <button id="btnRegenerate" class="icon-btn" title="重新生成" aria-label="重新生成">⟳</button>
+          <button id="btnCopy" class="icon-btn" title="复制" aria-label="复制">⧉</button>
+        </div>
+      </header>
+
+      <div class="password-box">
+        <input id="passwordOutput" type="text" readonly />
+      </div>
+
+      <section class="section">
+        <div class="section-title">密码长度</div>
+        <div class="length-row">
+          <input id="lengthRange" type="range" min="4" max="64" step="1" />
+          <input id="lengthNumber" type="number" min="4" max="64" step="1" />
+        </div>
+      </section>
+
+      <details class="section collapsible">
+        <summary class="section-title">包含字符</summary>
+        <div class="collapsible-body">
+          <label class="check">
+            <input id="incUpper" type="checkbox" />
+            <span>大写字母</span>
+          </label>
+          <label class="check">
+            <input id="incLower" type="checkbox" />
+            <span>小写字母</span>
+          </label>
+          <label class="check">
+            <input id="incDigits" type="checkbox" />
+            <span>数字</span>
+          </label>
+          <label class="check">
+            <input id="incSymbols" type="checkbox" />
+            <span>特殊字符</span>
+          </label>
+          <label class="check inline">
+            <input id="useCustomSymbols" type="checkbox" />
+            <span>自定义符号</span>
+          </label>
+          <input id="customSymbols" type="text" placeholder="自定义符号，如 !@#" />
+        </div>
+      </details>
+
+      <details class="section collapsible">
+        <summary class="section-title">排除字符</summary>
+        <div class="collapsible-body">
+          <label class="check">
+            <input id="excSimilar" type="checkbox" />
+            <span>相似字符 (I,l,1,O,0)</span>
+          </label>
+          <label class="check">
+            <input id="excAmbiguous" type="checkbox" />
+            <span>易混淆符号 ({}[]()/\\'"`~,;:.<>)</span>
+          </label>
+          <label class="check">
+            <input id="noRepeat" type="checkbox" />
+            <span>不允许重复</span>
+          </label>
+        </div>
+      </details>
+
+      <details class="section collapsible">
+        <summary class="section-title">分隔符</summary>
+        <div class="collapsible-body">
+          <label class="check">
+            <input id="useSeparator" type="checkbox" />
+            <span>添加分隔符</span>
+          </label>
+          <div class="separator-row">
+            <input id="separatorChar" type="text" maxlength="2" />
+            <span class="sep-label">每</span>
+            <input id="separatorGroup" type="number" min="2" max="16" step="1" />
+            <span class="sep-label">个字符</span>
+          </div>
+        </div>
+      </details>
+
+      <div class="actions">
+        <button id="btnGenerate" class="primary">生成</button>
+      </div>
+
+      <div id="message" class="message" aria-live="polite"></div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
