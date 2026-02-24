@@ -1,34 +1,48 @@
 # Ein-Password-Generator
 
-Repository: `https://github.com/WFacai/Ein-Password-Generator`
+Chrome extension for generating strong, customizable passwords directly in the browser popup.
 
-A lightweight Chrome extension popup for generating strong passwords with:
+- Repository: `https://github.com/WFacai/Ein-Password-Generator`
+- Chinese README: `README.zh-CN.md`
 
-- configurable length
-- uppercase/lowercase/digits/symbols toggles
-- optional custom symbol set
-- exclusion rules (similar/ambiguous chars)
-- no-repeat mode
-- separator formatting
-- copy to clipboard
+## Features
+
+- Configurable password length
+- Uppercase, lowercase, digits, and symbols toggles
+- Optional custom symbol set
+- Exclusion rules for similar and ambiguous characters
+- No-repeat mode
+- Optional separator formatting (for readability)
+- One-click copy to clipboard
+
+## Tech Stack
+
+- Chrome Extension Manifest V3
+- Vanilla HTML/CSS/JavaScript
+- `chrome.storage.sync` for persisting settings
+- `crypto.getRandomValues` for secure randomness
 
 ## Project Structure
 
 - `EinPasswordGenerator_Unpacked/` - extension source code
-- `EinPasswordGenerator_Unpacked/manifest.json` - extension manifest (MV3)
+- `EinPasswordGenerator_Unpacked/manifest.json` - extension manifest
+- `EinPasswordGenerator_Unpacked/popup.html` - popup UI
+- `EinPasswordGenerator_Unpacked/popup.css` - popup styles
+- `EinPasswordGenerator_Unpacked/popup.js` - password generation logic
 
-## Load Locally (Chrome)
+## Quick Start
 
 1. Open `chrome://extensions/`
 2. Enable **Developer mode**
 3. Click **Load unpacked**
 4. Select `EinPasswordGenerator_Unpacked`
 
-## Security Notes
+## Security and Release Notes
 
-- Do **not** commit private key files (`*.pem`)
-- Do **not** commit packaged artifacts (`*.crx`)
-- This repository is configured to ignore both via `.gitignore`
+- Never commit extension private keys (`*.pem`)
+- Do not commit packaged binaries (`*.crx`) to source repository
+- `.gitignore` already excludes both
+- If a `.pem` key was exposed publicly before, rotate/regenerate it
 
 ## License
 
