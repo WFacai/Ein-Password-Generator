@@ -1,9 +1,7 @@
 # Ein-Password-Generator
 
 Chrome extension for generating strong, customizable passwords directly in the browser popup.
-
-- Repository: `https://github.com/WFacai/Ein-Password-Generator`
-- Chinese README: `https://github.com/WFacai/Ein-Password-Generator/blob/main/README.zh-CN.md`
+[![中文](https://img.shields.io/badge/语言-中文-red)](README.zh-CN.md)
 
 ## Features
 
