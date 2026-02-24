@@ -1,4 +1,6 @@
-# Password Generator Chrome Extension
+# Ein-Password-Generator
+
+Repository: `https://github.com/WFacai/Ein-Password-Generator`
 
 A lightweight Chrome extension popup for generating strong passwords with:
 
